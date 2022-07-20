@@ -39,6 +39,12 @@ function reducer(state, { type, payload }) {
           c.id === payload.id ? (c.qty = payload.qty) : c.qty
         )
       };
+
+    case "CHANGE_GENDER_OP":
+      return {
+        ...state,
+        data: state.data.filter((c) => c.gender === payload.gender)
+      };
     default:
       return state;
   }

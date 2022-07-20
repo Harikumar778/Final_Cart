@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartPage from "./CartPage";
 import { CartState } from "./Context";
 import Filters from "./Filters";
@@ -14,7 +14,6 @@ export default function App() {
     state: { data }
   } = CartState();
   // console.log(data);
-
   return (
     <div className="App">
       <Navbar />
